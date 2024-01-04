@@ -1,12 +1,44 @@
-<!-- public/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your HTML Page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Hello, World!</h1>
+<!-- <img src="https://cdn.britannica.com/00/6200-004-42B7690E/Flag-Albania.jpg" alt="" style="max-width: 100%;">  -->
+
+  <!-- Start page with welcome message -->
+  <div id="welcomePage">
+    <h1>Welcome to Balkan dishes!</h1>
+    <p>Explore and enjoy delicious Balkan recipes.</p>
+    <a href="#" onclick="navigateToRecipes()">View Recipes</a>
+    <br>
+    <a href="../public/signup.html">Create Account</a>
+    <a href="../public/login.html">Login</a>
+  </div>
+
+
+  
+
+  <!-- Container for recipe buttons -->
+  <div id="recipeButtons" style="display: none;"></div>
+
+  <!-- Container for recipe details -->
+  <div id="recipeDetails"></div>
+
+  <!-- Navigation link on recipe page -->
+  <div id="navigationLink" style="display: none; position: fixed; top: 10px; right: 10px;">
+    <a href="#" onclick="goBackToWelcome()">Go Back to Home</a>
+  </div>
+
+
+
+
+  <script src="index.js">
+  
+  </script>
+
 </body>
 </html>
