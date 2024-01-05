@@ -6,14 +6,21 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
+    /* background-attachment:fixed;
+    background-color:#f2f2f2;
+    background-image:url(); // random image from google search
+    background-position:top center;
+    background-repeat:no-repeat;
+    background-size:100% auto;
+  } */
+  
   
   h1, h2, p {
     color: #333; /* Dark gray text color */
   }
   
   a {
-    color: #0066cc; /* Blue link color */
+    color: brown; /* Blue link color */
     text-decoration: none;
   }
   
@@ -43,6 +50,4 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
-  }
-  
-  
+  } }

@@ -46,26 +46,52 @@ let recipesLoaded = false;
         });
     }
 
-    // Function to update a recipe
-    function updateRecipe(recipeId, updatedRecipe) {
-      return fetch(`http://localhost:3000/recipe/recipes/${recipeId}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(updatedRecipe),
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          throw error;
-        });
-    }
+ // Function to update a recipe
+function updateRecipe(recipeId, updatedRecipe) {
+  const token = localStorage.getItem('token');
+  return fetch(`http://localhost:3000/recipe/recipes/${recipeId}`, {
+    method: 'PUT',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(updatedRecipe),
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      throw error;
+    });
+}
+
+// Function to delete a recipe
+function deleteRecipe(recipeId) {
+  const token = localStorage.getItem('token');
+  return fetch(`http://localhost:3000/recipe/recipes/${recipeId}`, {
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      throw error;
+    });
+}
+
+
 
     // Function to display recipes as buttons
     function displayRecipeButtons(recipes) {
