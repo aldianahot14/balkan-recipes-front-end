@@ -1,45 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recipe App</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- <img src="https://cdn.britannica.com/00/6200-004-42B7690E/Flag-Albania.jpg" alt="" style="max-width: 100%;">  -->
+    <div id="welcomePage">
+        <h1>Welcome to Balkan dishes!</h1>
+        <p>Explore and enjoy delicious Balkan recipes.</p>
+        <a href="#" onclick="navigateToRecipes()">View Recipes</a>
+        <br>
+        <a href="../public/signup.html">Create Account</a>
+        <br>
+        <a href="../public/login.html">Login</a>
+    </div>
 
-  <!-- Start page with welcome message -->
-  <div id="welcomePage">
-    <h1>Welcome to Balkan dishes!</h1>
-    <p>Explore and enjoy delicious Balkan recipes.</p>
-    <a href="#" onclick="navigateToRecipes()">View Recipes</a>
-    <br>
-    <a href="../public/signup.html">Create Account</a>
-    <br>
-    <a href="../public/login.html">Login</a>
-  </div>
+    <div id="recipeButtons" style="display: none;"></div>
 
+    <div id="recipeDetails"></div>
 
-  
+    <div id="navigationLink" style="display: none; position: fixed; top: 10px; right: 10px;">
+        <a href="#" onclick="goBackToWelcome()">Go Back to Home</a>
+    </div>
 
-  <!-- Container for recipe buttons -->
-  <div id="recipeButtons" style="display: none;"></div>
-
-  <!-- Container for recipe details -->
-  <div id="recipeDetails"></div>
-
-  <!-- Navigation link on recipe page -->
-  <div id="navigationLink" style="display: none; position: fixed; top: 10px; right: 10px;">
-    <a href="#" onclick="goBackToWelcome()">Go Back to Home</a>
-  </div>
-
-
-
-
-  <script src="index.js">
-  
-  </script>
-
+    <div id="formContainer"></div>
+    <script src="index.js"></script>
+    <!-- <script src="../src/index.js"></script> -->
 </body>
 </html>
