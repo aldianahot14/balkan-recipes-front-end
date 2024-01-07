@@ -49,6 +49,13 @@ function createRecipe(newRecipe) {
     });
 }
 
+
+
+
+
+
+
+
 // Function to update a recipe
 function updateRecipe(recipeId, updatedRecipe) {
   const headers = new Headers({
@@ -102,6 +109,10 @@ function displayRecipeButtons(recipes) {
 
   const titleElement = document.createElement('h2');
   titleElement.textContent = 'Here are some delicious recipes for you!';
+  titleElement.style.color = 'white';
+  titleElement.style.fontFamily = 'YourScriptFont, cursive';
+  // Set the font size to a specific value, for example, '24px'
+  titleElement.style.fontSize = '50px';
   buttonsContainer.appendChild(titleElement);
 
   recipes.forEach(recipe => {

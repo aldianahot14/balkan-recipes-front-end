@@ -1,56 +1,59 @@
 /* styles.css */
 
 body {
-    background-color: #cab9a7; /* Light gray background */
-    color: #333; /* Dark gray text color */
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    /* background-attachment:fixed;
-    background-color:#f2f2f2;
-    background-image:url(); // random image from google search
-    background-position:top center;
-    background-repeat:no-repeat;
-    background-size:100% auto;
-  } */
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-image: url('https://www.motosha.com/files/preview/1280x711/1145-albanian-flag-country-symbol-illustration.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+content-container {
+  position: relative;
+}
+
+#welcomePage, #recipeDetails {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px;
+  background-color: transparent; /* Transparent background for main content */
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.5); /* Shadowed box */
+  color: white; /* White text color for better contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Text shadow for better readability */
+  font-size: 20px;
+}
+
+#recipeButtons {
+  max-width: 800px;
+  margin: 1px auto;
+  padding: 10px;
+  background-color: transparent; /* Transparent background for recipe buttons */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+  display: none; /* Initially hidden */
+  text-align: center;
   
   
-  h1, h2, p {
-    color: #333; /* Dark gray text color */
-  }
+}
+
+#recipeButtons button {
+  background-color: transparent; /* Black background for buttons */
+  color: white; /* White text color for buttons */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
   
-  a {
-    color: brown; /* Blue link color */
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  #welcomePage, #recipeDetails {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 100px;
-    background-color: #fff; /* White background for main content */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
-  }
-  
-  #recipeButtons {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 10px;
-    background-color: #fff; /* White background for recipe buttons */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
-    display: none; /* Initially hidden */
-  }
-  
-  #navigationLink {
-    display: none; /* Initially hidden */
-    position: fixed;
-    top: 10px;
-    right: 10px;
-  } 
+}
+
+#navigationLink {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 10px;
+  right: 10px;
 }
 
 #recipeForm {
@@ -61,32 +64,43 @@ body {
   margin: 10px auto; /* Adjust the margin as needed */
 }
 
-/* #createRecipeFormContainer {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#createRecipeFormContainer {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 6px solid white;
+  border-radius: 5px;
+  color: white;
 }
 
 #createRecipeForm label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 #createRecipeForm input,
 #createRecipeForm textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 }
 
 #createRecipeForm button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-} */
+  background-color: white; /* Black background for buttons */
+  color: black; /* White text color for buttons */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+a {
+  color: white; /* Set link color to white */
+  text-decoration: none;
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+a:hover {
+  text-decoration: underline;
+}
