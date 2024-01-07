@@ -1,7 +1,7 @@
 /* styles.css */
 
 body {
-    background-color: #f2f2f2; /* Light gray background */
+    background-color: #cab9a7; /* Light gray background */
     color: #333; /* Dark gray text color */
     font-family: Arial, sans-serif;
     margin: 0;
@@ -31,7 +31,7 @@ body {
   #welcomePage, #recipeDetails {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 100px;
     background-color: #fff; /* White background for main content */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
   }
@@ -60,3 +60,33 @@ body {
 #recipeForm button {
   margin: 10px auto; /* Adjust the margin as needed */
 }
+
+/* #createRecipeFormContainer {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#createRecipeForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#createRecipeForm input,
+#createRecipeForm textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#createRecipeForm button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} */
