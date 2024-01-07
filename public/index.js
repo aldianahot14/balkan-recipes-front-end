@@ -72,7 +72,6 @@ function updateRecipe(recipeId, updatedRecipe) {
     });
 }
 
-// Function to handle creating a new recipe
 function handleCreateRecipe() {
   const form = document.getElementById('createRecipeForm');
   const formData = new FormData(form);
@@ -87,12 +86,14 @@ function handleCreateRecipe() {
   createRecipe(newRecipe)
       .then(createdRecipe => {
           console.log('Recipe created successfully:', createdRecipe);
-          // Optionally, you can do something with the created recipe, like displaying it.
+          // Navigate back to the home page after creating a recipe
+          window.location.href = 'index.html';
       })
       .catch(error => {
           console.error('Error creating recipe:', error);
       });
 }
+
 
 // Function to display recipes as buttons
 function displayRecipeButtons(recipes) {
@@ -224,4 +225,8 @@ function handleFormSubmit(recipeId) {
     .catch(error => {
       console.error('Error updating recipe:', error);
     });
+}
+function toggleCreateRecipeForm() {
+  const createRecipeFormContainer = document.getElementById('createRecipeFormContainer');
+  createRecipeFormContainer.style.display = createRecipeFormContainer.style.display === 'none' ? 'block' : 'none';
 }
