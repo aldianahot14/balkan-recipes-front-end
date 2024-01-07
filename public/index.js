@@ -10,7 +10,7 @@ function fetchRecipes() {
     'Authorization': `Bearer ${token}`,
     'Content-Type': 'application/json',
   });
-  return fetch('http://localhost:3000/recipe/recipes', {
+  return fetch('https://backendbalkanrecipes-9d325c3004a0.herokuapp.com/recipe/recipes', {
     method: 'GET',
     headers: headers,
   })
@@ -32,7 +32,7 @@ function createRecipe(newRecipe) {
     'Authorization': `Bearer ${token}`,
     'Content-Type': 'application/json',
   });
-  return fetch('http://localhost:3000/recipe/recipes', {
+  return fetch('https://backendbalkanrecipes-9d325c3004a0.herokuapp.com/recipe/recipes', {
     method: 'POST',
     headers: headers,
     body: JSON.stringify(newRecipe),
@@ -62,7 +62,7 @@ function updateRecipe(recipeId, updatedRecipe) {
     'Authorization': `Bearer ${token}`,
     'Content-Type': 'application/json',
   });
-  return fetch(`http://localhost:3000/recipe/recipes/${individualRecipe_Id}`, {
+  return fetch(`https://backendbalkanrecipes-9d325c3004a0.herokuapp.com/recipe/recipes/${individualRecipe_Id}`, {
     method: 'PUT',
     headers: headers,
     body: JSON.stringify(updatedRecipe),
