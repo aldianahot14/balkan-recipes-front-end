@@ -94,7 +94,7 @@ function handleCreateRecipe() {
       .then(createdRecipe => {
           console.log('Recipe created successfully:', createdRecipe);
           // Navigate back to the home page after creating a recipe
-          window.location.href = 'index.html';
+          window.location.href = '../index.html';
       })
       .catch(error => {
           console.error('Error creating recipe:', error);
