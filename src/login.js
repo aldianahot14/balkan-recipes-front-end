@@ -20,7 +20,7 @@ async function login(){
     console.log(password)
 
     //I am communicating with my mongoDB locally - i am posting my username and password to post it - so i can work with my backend login function 
-    const response = await axios.post("http://localhost:3000/user/login", {username: userName, password: password})
+    const response = await axios.post("https://backendbalkanrecipes-9d325c3004a0.herokuapp.com/user/login", {username: userName, password: password})
 
     console.log(response.data)
 
@@ -32,7 +32,7 @@ if (response.status === 200){
     userinfo = response.data.user
     console.log()
   // Navigate to the desired URL after successful login
-    window.location.href = 'http://127.0.0.1:5501/public/#';
+    window.location.href = '../index.html';
 
 }
 
