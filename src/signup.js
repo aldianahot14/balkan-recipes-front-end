@@ -17,12 +17,12 @@ async function signup(){
     console.log(userNameSignUp)
     console.log(passwordSignUp)
 
-    const response = await axios.post("http://localhost:3000/user/signup", {username: userNameSignUp, password: passwordSignUp})
+    const response = await axios.post("https://backendbalkanrecipes-9d325c3004a0.herokuapp.com/user/signup", {username: userNameSignUp, password: passwordSignUp})
     
      console.log(response.data)
 
      if (response.status === 200){
-        window.location.href = 'http://127.0.0.1:5501/public/#';
+        window.location.href = '../index.html';
 
      }
 
